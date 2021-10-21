@@ -35,7 +35,7 @@ void main(void) {
 	printf("\n\n\t\t\t\tEnter any key to continue...");
 	getch();
 	dashboard();
-}
+} // main function ends
 
 void welcomeScreen(void) {
 	// Function for Welcome Screen
@@ -44,7 +44,7 @@ void welcomeScreen(void) {
 	printf("\n\t\t\t\t\t\t\tPATIENT MANAGEMENT SYSTEM\t");
 	printf("\n\t\t\t\t\t\t\t       ABC HOSPITAL    \t\t");
 	printf("\n\t\t\t\t________________________________________________________________________________");
-}
+}// welcome function ends
 void dashboard(void) {
 	// Shows Option for CRUD operation
 	int choice;
@@ -201,17 +201,17 @@ H:
 		printf("\n\n\t\t\tOops!! Doctor name must only contain upto 30 alphabets");
 		goto H; // If validation failed, repeat again (Goto H)
 	}
-}
+} // 
 void ex_it(void) {
 	// function to clear everything in console and call welcomescreen and dashboard
 	system("cls");
 	welcomeScreen();
 	dashboard();
-}
+} // addRecordItem ends
 // title Function
 void title(void) {
 	printf("\n\n\t\t\t************************ ABC HOSPITAL *************************\n");
-}
+} // title function ends
 int listLoopRow(int row) {
 	// This function is used inside while loop, to print the user's record in each line
 	gotoxy(5,row);
@@ -230,7 +230,7 @@ int listLoopRow(int row) {
 	printf("%s", p.problem);
 	gotoxy(95, row);
 	printf("%s", p.doctor);
-}
+} // listLoopRow ends
 void recordTableHead(void) {
 	// This is used before while loop, to print the table heading
 	printf("\n____________________________________________________________________________________________________________________\n\n");
@@ -251,7 +251,7 @@ void recordTableHead(void) {
 	gotoxy(95,10);
 	printf("Prescribed Doctor\n");
 	printf("____________________________________________________________________________________________________________________");
-}
+} // recordTableHead ends
 /* ********************* View Records ************************ */
 void viewRecord(void) {
 	int row = 13; // This will assign value to argument below to listLoopRow(Row)
@@ -370,7 +370,7 @@ void editRecord(void) {
 		getch();
 		ex_it(); // Go back to main memu
 	}
-}
+} //editRecord ends
 void delRecord() {
 	int notValid = 0;
 	char ch;
@@ -435,4 +435,5 @@ void delRecord() {
 		// After successfull deletion, call viewRecord() to show the available records
 		viewRecord();
 	}
-}
+} // delRecord ends
+// Program Ends
